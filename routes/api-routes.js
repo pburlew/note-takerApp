@@ -18,7 +18,6 @@ function (err) {
             if (err) throw err;
             console.log("test"); 
         });
-
         return res.json(true);
 
     });
