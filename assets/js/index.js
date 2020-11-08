@@ -82,6 +82,8 @@ const handleNoteDelete = function (event) {
 // Sets the activeNote and displays it
 const handleNoteView = function () {
   activeNote = $(this).data();
+  // activeNote = {};
+
   renderActiveNote();
 };
 
@@ -104,7 +106,6 @@ const handleRenderSaveBtn = function () {
 // Render's the list of note titles
 const renderNoteList = (notes) => {
   $noteList.empty();
-
   const noteListItems = [];
 
   // Returns jquery object for li with given text and delete button
@@ -127,6 +128,8 @@ const renderNoteList = (notes) => {
     noteListItems.push(create$li("No saved Notes", false));
   }
 
+
+  
   notes.forEach((note) => {
     const $li = create$li(note.title).data(note);
     noteListItems.push($li);
