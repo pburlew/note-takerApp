@@ -6,6 +6,11 @@ module.exports = function(app) {
         res.json(data);
     });
 
+    app.get("/", function(req, res) {
+        res.json(path.join(__dirname, "public/index.html"));
+      });
+      
+
 
     app.get("/api/notes/:id", function(req, res) {
 
